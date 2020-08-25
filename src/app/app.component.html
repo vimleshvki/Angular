@@ -1,20 +1,16 @@
 <app-header></app-header>
-<div>
-  <table>
+<table>
     <tr>
-      <td>
-        <app-left-menu></app-left-menu>
-      </td>
-      <td>
-        <router-outlet></router-outlet>
-      </td>
+        <td>id</td>
+        <td>tittle</td>
+        <td>user id</td>
     </tr>
-  </table>
-
-
-
+    <tr *ngFor="let item of data">
+        <td>{{item.id}}</td>
+        <td>tittle</td>
+        <td>user id</td>
+    </tr>
+</table>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
 
-{{name}}
-{{fullname}}
-{{sum(39,44)}}

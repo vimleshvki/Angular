@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CompileShallowModuleMetadata } from '@angular/compiler';
+import{ UserServiceService }from './user-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +9,12 @@ import { CompileShallowModuleMetadata } from '@angular/compiler';
 })
 export class AppComponent {
   title = 'VKBLOGS';
-
-
-  name:string='vimlesh'
-  fullname='vimlesh kumar'
-  a=10;
-  b=100;
-  sum(n1,n2)
+  public data:any=[];
+  public result=[];
+  constructor(private user:UserServiceService)
   {
-    this.a=n1;
-    this.b=n2;
-    return this.a+this.b;
+
+    this.user.getdata().subscribe((res)=>{this.data=res})
   }
 }
 
