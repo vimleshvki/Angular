@@ -1,20 +1,5 @@
 <app-header></app-header>
-<div>
-  <table>
-    <tr>
-      <td>
-        <app-left-menu></app-left-menu>
-      </td>
-      <td>
-        <router-outlet></router-outlet>
-      </td>
-    </tr>
-  </table>
-
-
-
+<app-left-menu></app-left-menu>
+<div class="wrapper"></div>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
-
-{{name}}
-{{fullname}}
-{{sum(39,44)}}
