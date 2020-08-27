@@ -9,12 +9,5 @@ import{ UserServiceService }from './user-service.service';
 })
 export class AppComponent {
   title = 'VKBLOGS';
-  public data:any=[];
-  public result=[];
-  constructor(private user:UserServiceService)
-  {
-
-    this.user.getdata().subscribe((res)=>{this.data=res})
-  }
 }
 

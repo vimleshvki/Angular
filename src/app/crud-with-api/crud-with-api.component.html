@@ -1,1 +1,38 @@
-<p>crud-with-api works!</p>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">GET API DATA</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+
+            <div style="overflow-y: auto; width: 100%; height: 750px;">
+            <table style="margin-left: 5%; border:groove">
+                <tr>
+                    <td>SERIAL</td>
+                    <td style="text-align:center;">TITTLE</td>
+                    <td>USER ID</td>
+                </tr>
+                <tr *ngFor="let item of data">
+                    <td  style="text-align:center;">{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td  style="text-align:center;">{{item.userId}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+  </div>

@@ -7,8 +7,13 @@ import{AboutusComponent}from'./aboutus/aboutus.component';
 import{ContactusComponent}from'./contactus/contactus.component';
 import{DashboardComponent}from'./dashboard/dashboard.component';
 import{CrudWithApiComponent}from'./crud-with-api/crud-with-api.component';
+import{DataTableComponent}from './data-table/data-table.component';
 import { from } from 'rxjs';
 const routes: Routes = [
+  {
+    path:'dataTable',
+    component:DataTableComponent
+  },
 {
   path:'crudwithapi',
   component:CrudWithApiComponent

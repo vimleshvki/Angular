@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ UserServiceService }from './../user-service.service';
 
 @Component({
   selector: 'app-crud-with-api',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudWithApiComponent implements OnInit {
 
-  constructor() { }
+  public data:any=[];
+  public result=[];
+  constructor(private user:UserServiceService)
+  {
+
+    this.user.getdata().subscribe((res)=>{
+      console.warn(res)
+      this.data=res})
+
+  }
+
 
   ngOnInit(): void {
   }
