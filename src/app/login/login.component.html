@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Login</h1>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-sm-4" style="margin-left: 30%;">
+                <h3>LOGIN HERE</h3>
+                <input type="text" name="username" #txtUsername placeholder="Username" required >
+                <input type="password" name="password" #txtPassword placeholder="Password" required >
+                <input type="button" value="Login" class="btn" (click)="LoginFunction(txtUsername, txtPassword)" style="background-color:skyblue;">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+</div>
+
