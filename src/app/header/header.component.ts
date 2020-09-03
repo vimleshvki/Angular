@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{UserServiceService}from '../user-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userservice:UserServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  logoutFunction(){
+    //localStorage.removeItem('user_interface_id');
+    //localStorage.removeItem('userdata');
+debugger;
+    this.userservice.logoutUser();
   }
 
 }
