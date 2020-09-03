@@ -20,7 +20,6 @@ import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import{ActivateGuard}from'./activate.guard';
 import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
-import{ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -44,12 +43,7 @@ import{ToastrModule} from 'ngx-toastr';
     AppRoutingModule,
     HttpClientModule,
     OmsModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot({
-      timeOut:5000,
-      positionClass: 'toast-top-right',
-      preventDuplicates: true
-    })
+    BrowserAnimationsModule
   ],
   providers: [ActivateGuard],
   bootstrap: [AppComponent]
