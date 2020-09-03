@@ -43,7 +43,7 @@ import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     OmsModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [ActivateGuard],
   bootstrap: [AppComponent]
