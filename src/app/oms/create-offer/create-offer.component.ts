@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import{OfferDetails}from '../offer-details';
+import{OMSdataService}from '../omsdata.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-create-offer',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateOfferComponent implements OnInit {
 
-  constructor() { }
+  private data:OfferDetails;
 
+
+  constructor(private service:OMSdataService ) { 
+    
+  }
+
+  
   ngOnInit(): void {
   }
 

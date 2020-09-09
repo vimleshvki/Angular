@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
           console.warn(data);
           if (data) {
             localStorage.setItem("user_interface_id", data.user_interface_id);
-            localStorage.setItem("userdata", data);
+            localStorage.setItem("userdata", JSON.stringify(data));
             this.router.navigate(['/dashboard']);
           }
           else {

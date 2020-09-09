@@ -20,6 +20,7 @@ import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import{ActivateGuard}from'./activate.guard';
 import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
     HttpClientModule,
     OmsModule,
     BrowserAnimationsModule,
+    DataTablesModule
   ],
   providers: [ActivateGuard],
   bootstrap: [AppComponent]

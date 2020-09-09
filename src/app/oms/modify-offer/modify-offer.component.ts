@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ViewChild, OnInit,Directive,Input } from '@angular/core';
+import{CommonModule}from '@angular/common';
+import{OMSdataService}from '../omsdata.service';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-modify-offer',
@@ -6,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modify-offer.component.css']
 })
 export class ModifyOfferComponent implements OnInit {
+  user_interface_id=121;
+  offer_state=1; 
+  public data:any=[];
 
-  constructor() { }
+  constructor(private omsService:OMSdataService ) {
+    
+   
+  this.omsService.GetOfferDetailsByState(this.user_interface_id,this.offer_state).subscribe((res)=>{
+    this.data=res;
+    })
+  }
+
 
   ngOnInit(): void {
   }
-
 }

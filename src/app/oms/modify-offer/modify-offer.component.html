@@ -1,24 +1,42 @@
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Modify Offer</h1>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-
-         
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">MODIFY OFFER (DATA TABLE)</h1>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- Main content -->
+      </div>
+    </div>
   </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <table class="display" style="width:100%">
+          <thead>
+            <tr>
+              <th>OFFER ID</th>
+              <th>NAME</th>
+              <th>EMAIL ID</th>
+              <th>DATE OF BIRTH</th>
+              <th>CONTACT NO</th>
+              <th>CREATED BY</th>
+              <th>CREATED ON</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td>{{item.OFFER_ID}}</td>
+              <td>{{item.FIRST_NAME}}</td>
+              <td>{{item.EMAIL_ID1}}</td>
+              <td>{{item.DATE_OF_BIRTH}}</td>
+              <td>{{item.CONTACT_PHONE1}}</td>
+              <td>{{item.CREATED_BY}}</td>
+              <td>{{item.CREATED_DATE}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>

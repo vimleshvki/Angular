@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CompileShallowModuleMetadata } from '@angular/compiler';
 import{ UserServiceService }from './user-service.service';
+import{OMSdataService}from './oms/omsdata.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,6 @@ import{ UserServiceService }from './user-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VKBLOGS';
+  title = 'OMS';
 }
 
